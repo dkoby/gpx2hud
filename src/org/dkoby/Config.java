@@ -14,7 +14,7 @@ public class Config {
     public int videoHeight  = 240;
     public String inputGpx;
     public int fps          = 2;
-    public Font font        = new Font(Font.MONOSPACED, Font.PLAIN, 16);
+    public Font font        = new Font(Font.MONOSPACED, Font.PLAIN, 8);
 
     /**
      *

@@ -9,6 +9,8 @@ package org.dkoby;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.awt.Color;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 
 public class Render {
     private Config config;
@@ -45,8 +47,13 @@ public class Render {
         g.setFont(config.font);
         g.setPaint(Color.WHITE);
 
-        String s = String.format("Speed: %d км/ч", point.speed);
-        g.drawString(s, 100, 100);
+        Date date = new Date(point.time * 1000);
+
+        String s = String.format("Speed: %d км/ч, %s",
+                point.speed,
+                new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX").format(date)
+                );
+        g.drawString(s, 10, 100);
 
         return getData();
     }
