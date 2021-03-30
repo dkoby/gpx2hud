@@ -24,7 +24,25 @@ public class Gpx2Hud {
         System.out.println("");
         System.out.println("<OPTIONS> are:");
         System.out.println("    -h                             Show this help.");
-        System.out.println("    --geometry=<WIDTH>x<HEIGHT>    Geometry of output video.");
+        /*
+        System.out.println("    --format=FORMAT                Output data format.");
+        System.out.println("");
+        System.out.println("<FORMAT>:");
+        System.out.println("    <WIDTH>:<HEIGHT>:<BGCOLOR>:<TEXTCOLOR>#<LINE1>;<LINE2>...");
+        System.out.println("");
+        System.out.println("<LINE> format:");
+        System.out.println("    <FONT HEIGHT>:<TEXTCOLOR>:<TEXT>");
+        System.out.println("<TEXT> variables:");
+        System.out.println("    %kspeed     Value of speed in km/h.");
+        System.out.println("    %mspeed     Value of speed in mph.");
+        System.out.println("    %plus       Plus code of current coordinate.");
+        System.out.println("    %lat        Latitude.");
+        System.out.println("    %lon        Longitude.");
+        System.out.println("    %alt        Altitude.");
+        System.out.println("");
+        System.out.println("See examples in \"README.md\".");
+        */
+
         System.exit(1);
     }
     

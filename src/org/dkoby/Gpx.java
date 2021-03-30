@@ -132,7 +132,7 @@ public class Gpx {
                     if (matcher.find()) {
                         if (matcher.start(1) >= 0 && matcher.start(2) >= 0) {
                             try {
-                                point.speed = Integer.decode(matcher.group(1));
+                                point.speedDesc = Integer.decode(matcher.group(1));
                             } catch (Exception e) {
                                 throw new XMLStreamException("Invalid value of speed: " + e, element.getLocation());
                             }

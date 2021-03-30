@@ -10,11 +10,11 @@ import java.awt.Color;
 import java.awt.Font;
 
 public class Config {
-    public int videoWidth   = 320;
-    public int videoHeight  = 240;
+    public int videoWidth   = 250;
+    public int videoHeight  = 64;
     public String inputGpx;
     public int fps          = 2;
-    public Font font        = new Font(Font.MONOSPACED, Font.PLAIN, 8);
+    public Font font        = new Font(Font.MONOSPACED, Font.PLAIN, 16);
 
     /**
      *

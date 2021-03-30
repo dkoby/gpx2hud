@@ -18,5 +18,5 @@ Resulting jar-file will be in "build" directory (or directory, provided by
 
 ### Play resulting video with ffplay
 
-$ java -jar gpx2hud.jar input.gpx | ffplay -f rawvideo -vcodec rawvideo -video\_size 320x240 -pixel\_format rgba -framerate 2 -i -
+$ java -jar gpx2hud.jar input.gpx | ffplay -f rawvideo -vcodec rawvideo -video\_size 250x64 -pixel\_format rgba -framerate 2 -i -
 

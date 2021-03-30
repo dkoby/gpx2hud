@@ -9,6 +9,8 @@ package org.dkoby;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.awt.Color;
+import java.awt.FontMetrics;
+
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
@@ -41,6 +43,7 @@ public class Render {
     private byte[] drawFrame(GpxData.GpxPoint point) {
         Graphics2D g = graphics;
 
+
         g.setColor(Color.BLUE);
         g.fillRect(0, 0, config.videoWidth, config.videoHeight);
 
@@ -49,14 +52,35 @@ public class Render {
 
         Date date = new Date(point.time * 1000);
 
-        String s = String.format("Speed: %d км/ч, %s",
-                point.speed,
-                new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX").format(date)
-                );
-        g.drawString(s, 10, 100);
+        FontMetrics metrics = g.getFontMetrics(config.font);
+
+        int x = 0;
+        int y = 0;
+
+        x += 4;
+        y += metrics.getHeight();
+
+        g.drawString(String.format(
+                    "Скорость : %d км/ч", point.speedDesc), x, y);
+        y += metrics.getHeight();
+        if (false)
+        {
+            g.drawString(String.format(
+                        "Время    : %s"     , new SimpleDateFormat("HH:mm:ss").format(date)), x, y);
+            y += metrics.getHeight();
+        }
+        g.drawString(String.format(
+                    "Высота   : %d м"   , Math.round(point.altitude)), x, y);
+        y += metrics.getHeight();
+        g.drawString(String.format(
+                    "Plus Code: %s", point.plusCode), x, y);
+        y += metrics.getHeight();
 
         return getData();
     }
+    /**
+     *
+     */
     /**
      *
      */
